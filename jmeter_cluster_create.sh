@@ -4,6 +4,8 @@
 
 working_dir=`pwd`
 
+snap alias microk8s.kubectl kubectl
+
 echo "checking if kubectl is present"
 
 if ! hash kubectl 2>/dev/null
@@ -77,7 +79,12 @@ kubectl create -n $tenant -f $working_dir/jmeter_master_deploy.yaml
 
 echo "Creating Influxdb and the service"
 
-kubectl create -n $tenant -f $working_dir/jmeter_influxdb_configmap.yaml
+
+kubectl create -n $tenant -f $working_dir/influxdb-pv-volume.yaml
+
+kubectl create -n $tenant -f $working_dir/influxdb-pv-claim.yaml
+
+kubetcl create -n $tenant -f $working_dir/influxdb-pb-configmap.yaml
 
 kubectl create -n $tenant -f $working_dir/jmeter_influxdb_deploy.yaml
 
