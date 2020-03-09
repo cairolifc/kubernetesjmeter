@@ -37,7 +37,7 @@ spec:
             - containerPort: 2003
               name: graphite
           volumeMounts:
-            - mountPath: "/usr/influxdata"
+            - mountPath: "/var/lib/influxdb"
               name: influxdb-pv-storage
             - mountPath: "/usr/influxdata/config"
               name: config-volume

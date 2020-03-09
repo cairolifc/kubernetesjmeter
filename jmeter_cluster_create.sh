@@ -8,13 +8,6 @@ snap alias microk8s.kubectl kubectl
 
 echo "checking if kubectl is present"
 
-if ! hash kubectl 2>/dev/null
-then
-    echo "'kubectl' was not found in PATH"
-    echo "Kindly ensure that you can acces an existing kubernetes cluster via kubectl"
-    exit
-fi
-
 kubectl version --short
 
 echo "Current list of namespaces on the kubernetes cluster:"
@@ -84,7 +77,7 @@ kubectl create -n $tenant -f $working_dir/influxdb-pv-volume.yaml
 
 kubectl create -n $tenant -f $working_dir/influxdb-pv-claim.yaml
 
-kubetcl create -n $tenant -f $working_dir/influxdb-pb-configmap.yaml
+kubectl create -n $tenant -f $working_dir/jmeter_influxdb_configmap.yaml
 
 kubectl create -n $tenant -f $working_dir/jmeter_influxdb_deploy.yaml
 
