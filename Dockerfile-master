@@ -1,4 +1,3 @@
-FROM kubernautslabs/jmeter-base:latest
-MAINTAINER Kubernauts-lab
+FROM kubernautslabs/jmeter-base:5.2.1
 		
 EXPOSE 60000

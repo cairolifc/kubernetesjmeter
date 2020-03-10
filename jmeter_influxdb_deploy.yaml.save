@@ -1,0 +1,40 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: influxdb-jmeter
+  labels:
+    app: influxdb-jmeter
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: influxdb-jmeter
+  template:
+    metadata:
+      labels:
+        app: influxdb-jmeter
+    spec:
+       volumes:
+        - name: influxdb-pv-storage
+          persistentVolumeClaim:
+           claimName: influxdb-pv-claim
+        - name: config-volume
+           configMap:
+           name: influxdb-config
+       containers:
+        - image: influxdb
+          imagePullPolicy: IfNotPresent
+          name: influxdb
+          volumeMounts:
+          - name: config-volume
+            mountPath: /etc/influxdb
+          ports:
+            - containerPort: 8083
+              name: influx
+            - containerPort: 8086
+              name: api
+            - containerPort: 2003
+              name: graphite
+          volumeMounts:
+            - mountPath: "/usr/influxdata"
+              name: 
