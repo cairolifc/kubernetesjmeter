@@ -4,7 +4,7 @@
 
 working_dir=`pwd`
 
-snap alias microk8s.kubectl kubectl
+#snap alias microk8s.kubectl kubectl
 
 echo "checking if kubectl is present"
 

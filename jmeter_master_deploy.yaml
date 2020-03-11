@@ -16,8 +16,8 @@ spec:
     spec:
       containers:
       - name: jmmaster
-        image: qaseatcode/jmeter_master:5.2.1
-        imagePullPolicy: IfNotPresent
+        image: localhost:32000/jmeter-master:registry
+        #imagePullPolicy: Never
         command: [ "/bin/bash", "-c", "--" ]
         args: [ "while true; do sleep 30; done;" ]
         volumeMounts:
