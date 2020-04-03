@@ -277,7 +277,7 @@
           <stringProp name="classname">org.apache.jmeter.visualizers.backend.influxdb.InfluxdbBackendListenerClient</stringProp>
         </BackendListener>
         <hashTree/>
-        <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="false">
+        <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener Grafana Local" enabled="true">
           <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
             <collectionProp name="Arguments.arguments">
               <elementProp name="dapt.influxdb.database" elementType="Argument">
@@ -287,12 +287,12 @@
               </elementProp>
               <elementProp name="dapt.backendlistener.proyect" elementType="Argument">
                 <stringProp name="Argument.name">dapt.backendlistener.proyect</stringProp>
-                <stringProp name="Argument.value">proyectTest</stringProp>
+                <stringProp name="Argument.value">Prueba</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="dapt.backendlistener.scene" elementType="Argument">
                 <stringProp name="Argument.name">dapt.backendlistener.scene</stringProp>
-                <stringProp name="Argument.value">sceneTest</stringProp>
+                <stringProp name="Argument.value">ESC_04_Prueba</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="dapt.backendlistener.testcase" elementType="Argument">
@@ -302,7 +302,7 @@
               </elementProp>
               <elementProp name="dapt.backendlistener.typeLoadTest" elementType="Argument">
                 <stringProp name="Argument.name">dapt.backendlistener.typeLoadTest</stringProp>
-                <stringProp name="Argument.value">test</stringProp>
+                <stringProp name="Argument.value">loadtest</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="dapt.backendlistener.environment" elementType="Argument">
@@ -312,7 +312,7 @@
               </elementProp>
               <elementProp name="dapt.influxdb.host" elementType="Argument">
                 <stringProp name="Argument.name">dapt.influxdb.host</stringProp>
-                <stringProp name="Argument.value">10.1.39.36</stringProp>
+                <stringProp name="Argument.value">192.168.209.35</stringProp>
                 <stringProp name="Argument.metadata">=</stringProp>
               </elementProp>
               <elementProp name="dapt.influxdb.port" elementType="Argument">
@@ -339,6 +339,43 @@
           </elementProp>
           <stringProp name="classname">dapt.jmeter.JMeterInfluxDBBackendListenerClientRavisDAPTv2</stringProp>
         </BackendListener>
+        <hashTree/>
+        <ResultCollector guiclass="ViewResultsFullVisualizer" testclass="ResultCollector" testname="Ver Árbol de Resultados" enabled="true">
+          <boolProp name="ResultCollector.error_logging">false</boolProp>
+          <objProp>
+            <name>saveConfig</name>
+            <value class="SampleSaveConfiguration">
+              <time>true</time>
+              <latency>true</latency>
+              <timestamp>true</timestamp>
+              <success>true</success>
+              <label>true</label>
+              <code>true</code>
+              <message>true</message>
+              <threadName>true</threadName>
+              <dataType>true</dataType>
+              <encoding>false</encoding>
+              <assertions>true</assertions>
+              <subresults>true</subresults>
+              <responseData>false</responseData>
+              <samplerData>false</samplerData>
+              <xml>false</xml>
+              <fieldNames>true</fieldNames>
+              <responseHeaders>false</responseHeaders>
+              <requestHeaders>false</requestHeaders>
+              <responseDataOnError>true</responseDataOnError>
+              <saveAssertionResultsFailureMessage>true</saveAssertionResultsFailureMessage>
+              <assertionsResultsToSave>2</assertionsResultsToSave>
+              <bytes>true</bytes>
+              <sentBytes>true</sentBytes>
+              <url>true</url>
+              <threadCounts>true</threadCounts>
+              <idleTime>true</idleTime>
+              <connectTime>true</connectTime>
+            </value>
+          </objProp>
+          <stringProp name="filename"></stringProp>
+        </ResultCollector>
         <hashTree/>
       </hashTree>
     </hashTree>
