@@ -24,7 +24,7 @@ RUN wget -q -O /jmeter/apache-jmeter-$JMETER_VERSION/lib/ext/pepper-box-1.0.jar 
 
 RUN cd /jmeter/apache-jmeter-$JMETER_VERSION/ && wget -q -O /tmp/bzm-parallel-0.7.zip https://jmeter-plugins.org/files/packages/bzm-parallel-0.7.zip && unzip -n /tmp/bzm-parallel-0.7.zip && rm /tmp/bzm-parallel-0.7.zip
 
-RUN cd /jmeter/apache-jmeter-$JMETER_VERSION/ && git clone https://juniomik21:TestQA123@github.com/cairolifc/jmeterplugin.git && cp -r jmeterplugin/lib/*  lib/ 
+RUN cd /jmeter/apache-jmeter-$JMETER_VERSION/ && git clone https://71f48ccc50b3fca8454d7de32a5744f00f1ba488:x-oauth-basic@github.com/cairolifc/jmeterplugin.git && cp -r jmeterplugin/lib/*  lib/ 
 
 ENV JMETER_HOME /jmeter/apache-jmeter-$JMETER_VERSION/
 		
