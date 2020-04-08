@@ -72,4 +72,4 @@ done # for csvfile in "${jmx_dir}/*.csv"
 
 ## Echo Starting Jmeter load test
 
-kubectl exec -ti -n "$tenant" "$master_pod" -- /jmeter/load_test "/${jmx_dir}.jmx"
+kubectl exec -ti -n "$tenant" "$master_pod" -- /bin/bash /load_test "${jmx_dir}.jmx"

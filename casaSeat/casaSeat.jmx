@@ -272,8 +272,8 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">10</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <stringProp name="ThreadGroup.num_threads">500</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">1800</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration"></stringProp>
         <stringProp name="ThreadGroup.delay"></stringProp>
@@ -7884,7 +7884,7 @@
             </elementProp>
             <elementProp name="dapt.backendlistener.scene" elementType="Argument">
               <stringProp name="Argument.name">dapt.backendlistener.scene</stringProp>
-              <stringProp name="Argument.value">ESC_04_PruebaCSV</stringProp>
+              <stringProp name="Argument.value">ESC_01_PruebaCSV</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="dapt.backendlistener.testcase" elementType="Argument">
@@ -7904,7 +7904,7 @@
             </elementProp>
             <elementProp name="dapt.influxdb.host" elementType="Argument">
               <stringProp name="Argument.name">dapt.influxdb.host</stringProp>
-              <stringProp name="Argument.value">192.168.209.35</stringProp>
+              <stringProp name="Argument.value">192.168.72.243</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="dapt.influxdb.port" elementType="Argument">

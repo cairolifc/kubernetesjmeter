@@ -9,9 +9,7 @@ apt-get -qy install \
 wget \
 telnet \
 iputils-ping \
-unzip \
-git
-
+unzip
 RUN   mkdir /jmeter \
 && cd /jmeter/ \
 && wget https://archive.apache.org/dist/jmeter/binaries/apache-jmeter-$JMETER_VERSION.tgz \
@@ -22,9 +20,9 @@ RUN cd /jmeter/apache-jmeter-$JMETER_VERSION/ && wget -q -O /tmp/JMeterPlugins-S
 
 RUN wget -q -O /jmeter/apache-jmeter-$JMETER_VERSION/lib/ext/pepper-box-1.0.jar https://github.com/raladev/load/blob/master/JARs/pepper-box-1.0.jar?raw=true
 
-RUN cd /jmeter/apache-jmeter-$JMETER_VERSION/ && wget -q -O /tmp/bzm-parallel-0.7.zip https://jmeter-plugins.org/files/packages/bzm-parallel-0.7.zip && unzip -n /tmp/bzm-parallel-0.7.zip && rm /tmp/bzm-parallel-0.7.zip
+	RUN cd /jmeter/apache-jmeter-$JMETER_VERSION/ && wget -q -O /tmp/bzm-parallel-0.7.zip https://jmeter-plugins.org/files/packages/bzm-parallel-0.7.zip && unzip -n /tmp/bzm-parallel-0.7.zip && rm /tmp/bzm-parallel-0.7.zip
 
-RUN cd /jmeter/apache-jmeter-$JMETER_VERSION/ && git clone https://juniomik21:megea14CAROLINA@github.com/cairolifc/jmeterplugin.git && cp -r jmeterplugin/lib/*  lib/ 
+
 
 ENV JMETER_HOME /jmeter/apache-jmeter-$JMETER_VERSION/
 		
