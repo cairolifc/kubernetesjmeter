@@ -1,11 +1,11 @@
-kind: PersistentVo
+kind: PersistentVolume
 apiVersion: v1
 metadata:
   name: grafana-pv
 spec:
   storageClassName
   accessModes:
-    - ReadWriteMan
+    - ReadWriteMany
   resources:
     requests:
-      storage: 3Gi
+      storage: 1Gi
