@@ -1,9 +1,9 @@
-kind: PersistentVolume
+kind: PersistentVolumeClaim
 apiVersion: v1
 metadata:
   name: grafana-pv-claim
 spec:
-  storageClassName
+  storageClassName: manual
   accessModes:
     - ReadWriteMany
   resources:
