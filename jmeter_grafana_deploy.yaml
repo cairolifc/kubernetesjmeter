@@ -18,7 +18,6 @@ spec:
         - name: grafana-pv-storage
           persistentVolumeClaim:
            claimName: grafana-pv-claim
-        - name: config-volume
           
       containers:
       - name: grafana
