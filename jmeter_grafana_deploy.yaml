@@ -14,6 +14,12 @@ spec:
       labels:
         app: jmeter-grafana
     spec:
+      volumes:
+        - name: grafana-pv-storage
+          persistentVolumeClaim:
+           claimName: grafana-pv-claim
+        - name: config-volume
+          
       containers:
       - name: grafana
         image: grafana/grafana:5.2.0
@@ -34,3 +40,10 @@ spec:
           # If you're only using the API Server proxy, set this value instead:
           # value: /api/v1/namespaces/kube-system/services/monitoring-grafana/proxy
           value: /
+         volumeMounts:
+          - name: config-volume
+            mountPath: /etc/grafana
+          volumeMounts:
+          - mountPath: "/var/lib/grafana"
+            name: grafana-pv-storage
+          
