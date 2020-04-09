@@ -26,8 +26,8 @@ spec:
         - containerPort: 3000
           protocol: TCP
         volumeMounts:
-        - mountPath: "/var/lib/grafana/"
-          name: grafana-pv-storage
+          - name: grafana-pv-storage
+            mountPath: "/var/lib/grafana"
         env:
         - name: GF_AUTH_BASIC_ENABLED
           value: "true"
