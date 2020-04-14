@@ -13,7 +13,11 @@ spec:
     metadata:
       labels:
         app: jmeter-grafana
-    spec:    
+    spec:
+      initContainers:
+      - name: init-chown-data
+        imagePullPolicy: IfNotPresent
+        command: ["chown", "-R", "472:472", "/var/lib/grafana"]
       containers:
       - name: grafana
         image: grafana/grafana:5.2.0
