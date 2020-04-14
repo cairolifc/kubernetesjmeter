@@ -85,6 +85,9 @@ kubectl create -n $tenant -f $working_dir/jmeter_influxdb_svc.yaml
 
 echo "Creating Grafana Deployment"
 
+sudo mkdir /mnt/grafana
+sudo chown -R 472:472  /mnt/grafana
+
 kubectl create -n $tenant -f $working_dir/grafana-pv-volume.yaml
 
 kubectl create -n $tenant -f $working_dir/grafana-pv-claim.yaml
