@@ -64,7 +64,7 @@
             </elementProp>
             <elementProp name="dapt.backendlistener.scene" elementType="Argument">
               <stringProp name="Argument.name">dapt.backendlistener.scene</stringProp>
-              <stringProp name="Argument.value">EscPCC01</stringProp>
+              <stringProp name="Argument.value">EscPCC01GKE</stringProp>
               <stringProp name="Argument.metadata">=</stringProp>
             </elementProp>
             <elementProp name="dapt.backendlistener.testcase" elementType="Argument">
@@ -220,8 +220,8 @@
           <boolProp name="LoopController.continue_forever">false</boolProp>
           <stringProp name="LoopController.loops">1</stringProp>
         </elementProp>
-        <stringProp name="ThreadGroup.num_threads">1</stringProp>
-        <stringProp name="ThreadGroup.ramp_time">1</stringProp>
+        <stringProp name="ThreadGroup.num_threads">30</stringProp>
+        <stringProp name="ThreadGroup.ramp_time">20</stringProp>
         <boolProp name="ThreadGroup.scheduler">false</boolProp>
         <stringProp name="ThreadGroup.duration">0</stringProp>
         <stringProp name="ThreadGroup.delay">0</stringProp>
@@ -4669,9 +4669,9 @@
         <elementProp name="ThreadGroup.main_controller" elementType="com.blazemeter.jmeter.control.VirtualUserController"/>
         <stringProp name="ThreadGroup.on_sample_error">continue</stringProp>
         <stringProp name="TargetLevel">10</stringProp>
-        <stringProp name="RampUp">5</stringProp>
-        <stringProp name="Steps">2</stringProp>
-        <stringProp name="Hold">10</stringProp>
+        <stringProp name="RampUp">1</stringProp>
+        <stringProp name="Steps">0</stringProp>
+        <stringProp name="Hold">7</stringProp>
         <stringProp name="LogFilename"></stringProp>
         <stringProp name="Iterations"></stringProp>
         <stringProp name="Unit">M</stringProp>
